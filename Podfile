@@ -4,5 +4,4 @@ use_frameworks!
 
 target 'iMoviesNative' do
     pod 'Alamofire', '~> 4.0'
-    pod 'SwiftSoup'
 end

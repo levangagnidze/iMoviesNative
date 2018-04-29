@@ -1,20 +1,16 @@
 PODS:
   - Alamofire (4.7.1)
-  - SwiftSoup (1.7.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
-  - SwiftSoup
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
-    - SwiftSoup
 
 SPEC CHECKSUMS:
   Alamofire: 68d7d521118d49c615a8d2214d87cdf525599d30
-  SwiftSoup: 277f7ef548826e0ca7603a06b30d4a5df3ee0587
 
-PODFILE CHECKSUM: 4fd01cd4b7302626935dca544ec4ee761b50b381
+PODFILE CHECKSUM: def31e44917ebf733659099ef835b6953b6e692c
 
 COCOAPODS: 1.5.0
