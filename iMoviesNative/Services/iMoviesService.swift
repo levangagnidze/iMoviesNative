@@ -76,8 +76,10 @@ class iMoviesService {
                                                 
                                                 var dict = _currFile
                                                 
+                                                //add language key value
                                                 dict[MovieFile.CodingKeys.language.rawValue] = langValue
-                                                
+                                               
+                                                //create final model
                                                 if let movieFile = MovieFile.covertJsonToModel(json: dict)  {
                                                     movieFiles?.append(movieFile)
                                                 }

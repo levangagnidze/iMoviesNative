@@ -13,6 +13,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
 
     let detailsSegueIndetifier = "details"
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     var store = MovieStore()
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -135,10 +136,20 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
             return
         }
         
+        activityIndicator.startAnimating()
+        
         store.movies.removeAll()
         iMoviesService.searchMovies(text: text, completionHandler: { (movieStore,error) in
+            
+            self.activityIndicator.stopAnimating()
+            
             if let error = error {
                 print(error)
+                
+                let alert = UIAlertController(title: "Connection problem", message: "Something went wrong, please try again!", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                self.present(alert, animated: true)
+                
             }else{
                 self.store = movieStore
                 self.collectionView.reloadData()

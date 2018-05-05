@@ -138,7 +138,7 @@ sdfdsfds</string>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSG-4s-9Lf">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSG-4s-9Lf">
                                 <rect key="frame" x="394" y="130" width="1132" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
@@ -156,11 +156,23 @@ sdfdsfds</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="wA0-x9-sW9">
+                                <rect key="frame" x="910" y="490" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Kgm-fW-RXK"/>
+                                    <constraint firstAttribute="height" constant="100" id="Tok-wh-aV8"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wA0-x9-sW9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fwZ-fY-a39"/>
+                            <constraint firstItem="wA0-x9-sW9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tOS-nD-vTk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="wu6-TO-1qx"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="wA0-x9-sW9" id="GPo-c8-chq"/>
                         <outlet property="collectionView" destination="kOP-ki-6K1" id="GHh-J7-Zzs"/>
                         <outlet property="detailsLabel" destination="wbv-4L-WB8" id="hOg-gn-rSj"/>
                         <outlet property="searchText" destination="geY-jx-uq4" id="tGg-hn-dEQ"/>
